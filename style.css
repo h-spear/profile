@@ -9,6 +9,7 @@
     --color-orange: rgb(230, 130, 0);
     --color-green: #ad0023;
 
+    --font-xsmall: 12px;
     --font-small: 14px;
     --font-regular: 16px;
     --font-normal: 18px;
@@ -75,6 +76,10 @@ body {
     padding: 20px 0 60px 0;
 }
 
+.content-line {
+    margin: 40px 0;
+}
+
 .content h3 {
     font-size: 32px;
     font-family: var(--font-nanum-gothic);
@@ -84,7 +89,7 @@ body {
 }
 
 .content > div {
-    margin-top: 64px;
+    margin-top: 24px;
 }
 
 .content > div > ul {
@@ -103,6 +108,10 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 0;
+}
+
+.xsmall {
+    font-size: var(--font-xsmall);
 }
 
 .small {
