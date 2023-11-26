@@ -8,6 +8,10 @@
     --color-dark: rgb(60, 60, 60);
     --color-orange: rgb(230, 130, 0);
     --color-green: #ad0023;
+    --color-a: rgb(0, 116, 224);
+    --color-a-hover: rgb(18, 0, 184);
+    --color-dark-a: yellow;
+    --color-dark-a-hover: yellowgreen;
 
     --font-xsmall: 12px;
     --font-small: 14px;
@@ -25,11 +29,12 @@
 
 a {
     text-decoration: none;
-    color: rgb(0, 116, 224);
+    transition: 0.3s;
+    color: var(--color-a);
 }
 
 a:hover {
-    color: rgb(18, 0, 184);
+    color: var(--color-a-hover);
 }
 
 body {
@@ -39,6 +44,7 @@ body {
     display: flex;
     justify-content: center;
     color: var(--color-dark);
+    transition: 0.3s;
 }
 
 .container {
@@ -71,7 +77,6 @@ body {
 }
 
 .content {
-    background-color: whitesmoke;
     font-family: var(--font-roboto);
     padding: 20px 0 60px 0;
 }
@@ -152,10 +157,59 @@ body {
 .foot-icon {
     font-size: var(--font-xxlarge);
     color: var(--color-dark);
+    transition: 0.3s;
 }
 
 .foot-icon:hover {
     color: var(--color-orange);
+}
+
+.theme-change-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--color-dark);
+    transition: 0.3s;
+}
+
+.theme-change-btn:hover {
+    transform: scale(1.1);
+}
+
+.btn-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+/* 다크 모드 */
+.dark {
+    background-color: var(--color-dark);
+    color: white;
+}
+
+.dark .foot-icon {
+    color: whitesmoke;
+}
+
+.dark .foot-icon:hover {
+    color: orange;
+}
+
+.dark a {
+    color: var(--color-dark-a);
+}
+
+.dark .line {
+    border-color: whitesmoke;
+}
+
+.dark a:hover {
+    color: var(--color-dark-a-hover);
+}
+.dark .theme-change-btn {
+    color: whitesmoke;
 }
 
 @media screen and (max-width: 768px) {
