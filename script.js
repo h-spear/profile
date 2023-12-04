@@ -11,18 +11,18 @@ const changeTheme = () => {
         body.classList.remove('dark');
         changeIcon.classList.add('fa-moon');
         changeIcon.classList.remove('fa-sun');
-        deleteCookie('theme-dark');
+        setCookie('theme-color', 'light', 30);
     } else {
         body.classList.add('dark');
         changeIcon.classList.remove('fa-moon');
         changeIcon.classList.add('fa-sun');
-        setCookie('theme-dark', 'true', 30);
+        setCookie('theme-color', 'dark', 30);
     }
 };
 
 changeBtn.addEventListener('click', changeTheme);
-const themeDark = getCookie('theme-dark');
-if (themeDark != null && themeDark === 'true') {
+const themeColor = getCookie('theme-color');
+if (themeColor === null || themeColor === 'dark') {
     changeTheme();
 }
 
@@ -37,8 +37,4 @@ function setCookie(name, value, exp) {
 function getCookie(name) {
     var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
     return value ? value[2] : null;
-}
-
-function deleteCookie(name) {
-    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
