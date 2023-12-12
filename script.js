@@ -1,26 +1,26 @@
 function notPrepared() {
     alert('준비중입니다');
 }
-
-const changeBtn = document.querySelector('.theme-change-btn');
-const changeIcon = document.querySelector('.theme-change-btn-icon');
 const body = document.querySelector('body');
+
+const toggleBtn = document.querySelector('.btn-toggle');
+const toggleBtnIcon = document.querySelector('.btn__icon');
 
 const changeTheme = () => {
     if (body.classList.contains('dark')) {
         body.classList.remove('dark');
-        changeIcon.classList.add('fa-moon');
-        changeIcon.classList.remove('fa-sun');
+        toggleBtnIcon.classList.remove('fa-moon');
+        toggleBtnIcon.classList.add('fa-sun');
         setCookie('theme-color', 'light', 30);
     } else {
         body.classList.add('dark');
-        changeIcon.classList.remove('fa-moon');
-        changeIcon.classList.add('fa-sun');
+        toggleBtnIcon.classList.add('fa-moon');
+        toggleBtnIcon.classList.remove('fa-sun');
         setCookie('theme-color', 'dark', 30);
     }
 };
 
-changeBtn.addEventListener('click', changeTheme);
+toggleBtn.addEventListener('click', changeTheme);
 const themeColor = getCookie('theme-color');
 if (themeColor === null || themeColor === 'dark') {
     changeTheme();
