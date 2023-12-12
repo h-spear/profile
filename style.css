@@ -170,6 +170,7 @@ body {
     padding: 0 20px;
     background-color: whitesmoke;
     transition: 0.3s;
+    border-bottom: 1px solid rgb(215, 215, 215);
 }
 
 .btn-toggle {
@@ -219,6 +220,7 @@ body {
 
 .dark .navbar {
     background-color: var(--color-dark);
+    border-bottom: 1px solid rgb(88, 88, 88);
 }
 
 .dark .foot-icon {
