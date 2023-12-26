@@ -260,7 +260,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .container {
-        padding: 20px;
+        padding: 70px 20px 20px 20px;
     }
 
     .my-name {
@@ -273,6 +273,10 @@ body {
 
     .content > div > ul > li > ul {
         padding: 0 0 0 30px;
+    }
+
+    .xsmall {
+        padding-left: 15px;
     }
 
     .content__element {
