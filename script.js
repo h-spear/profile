@@ -38,3 +38,16 @@ function getCookie(name) {
     var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
     return value ? value[2] : null;
 }
+
+const bojProfileApiBaseUrl =
+    'https://api-py.vercel.app/?r=https://solved.ac/api/v3/user/show?handle=';
+const bojHandle = 'ki9014';
+
+window.onload = () => {
+    const solvedCount = document.querySelector('.boj-solved-count');
+    fetch(bojProfileApiBaseUrl + bojHandle)
+        .then((response) => response.json())
+        .then((data) => {
+            solvedCount.innerText = data.solvedCount;
+        });
+};

@@ -258,6 +258,10 @@ body {
     color: white;
 }
 
+.boj-solved-count {
+    font-weight: 700;
+}
+
 @media screen and (max-width: 768px) {
     .container {
         padding: 70px 20px 20px 20px;
